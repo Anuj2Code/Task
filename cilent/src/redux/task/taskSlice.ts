@@ -40,7 +40,7 @@ export function getProduct(data: TaskState) {
     const config = {
       headers: { "Content-Type": "application/json" },
     };
-    const res = await axios.post(`http://localhost:8800/api/v1/tasks/`, data , config);
+    const res = await axios.post(`https://task-9mgm.onrender.com/api/v1/tasks/`, data , config);
     console.log(res);
     dispatch(fetchtask(res.data))
   }
@@ -48,14 +48,14 @@ export function getProduct(data: TaskState) {
 
 export function getTasks() {
   return async function gettaskThunk(dispatch: any) {
-    const res = await axios.get('http://localhost:8800/api/v1/tasks');
+    const res = await axios.get('https://task-9mgm.onrender.com/api/v1/tasks');
     dispatch(getTask(res.data))
   }
 }
 
 export function deleteTask(id:string) {
   return async function deltaskThunk(dispatch: any) {
-    const res = await axios.delete(`http://localhost:8800/api/v1/tasks/${id}`);
+    const res = await axios.delete(`https://task-9mgm.onrender.com/api/v1/tasks/${id}`);
     dispatch(deleteTsk(res))
   }
 }

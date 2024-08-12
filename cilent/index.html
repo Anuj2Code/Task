@@ -6,50 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
   </head>
-  <body style="overflow-x: hidden; overflow-y: scroll">
+  <body style="overflow-x: scroll; overflow-y: scroll">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 
-<!-- import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import taskSlice from './task/taskSlice'
-
-import {
-  persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-} from 'redux-persist';
-import storage from 'redux-persist/lib/storage'
-
-const persistConfig = {
-  key: 'root',
-  version: 1,
-  storage,
-}
-
-const rootReducer = combineReducers({
-  tsk:taskSlice
-})
-
-const persistedReducer = persistReducer(persistConfig, rootReducer)
-
-
-const store = configureStore({
-  reducer:persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
-});
-
-
-export default store;
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch -->
